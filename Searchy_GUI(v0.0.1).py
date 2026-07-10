@@ -13,7 +13,7 @@ def bashcnct():
     search_data=query.get()
     bash=f"""
     search_bash="{search_data}"
-    search_result=$(find / -name $search_bash 2> /dev/null)
+    search_result=$(find / -iname $search_bash 2> /dev/null)
     if [ -z "$search_result" ]; then
         echo "File not found: 404"
     else
