@@ -1,5 +1,5 @@
 # Searchy
- A lightning fast searching tool written in bash for linux, with a CLI interface. Currently, this does have case sensitivity, and can take long to search if another large partition with lots of files (like a windwos partition on same computer) is mounted. These issues will be fixed soon, along with an upcoming tkinter GUI version.
+ A lightning fast searching tool written in bash for linux, with a CLI & GUI interface. Currently, this can take long to search if another large partition with lots of files (like a windows partition on the same computer) is mounted, & the GUI may take long to search even with no other big partitions mounted. These issues will be fixed soon.
 
  # Dependencies for CLI version
  * Unix-like operating system
