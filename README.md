@@ -1,5 +1,5 @@
 # Searchy
- A lightning fast searching tool written in bash for linux, with a CLI & GUI interface. Currently, this can take long to search if another large partition with lots of files (like a windows partition on the same computer) is mounted, & the GUI may take long to search even with no other big partitions mounted. These issues will be fixed soon.
+ A lightning fast searching tool written in bash for linux, with a CLI & GUI interface. Currently, this program cannot search partitions mounted at /run/media because I pruend out that directory to make this program faster, I will fix this shortly. However, it can search `/mnt`.
 
  # Dependencies for CLI version
  * Unix-like operating system
