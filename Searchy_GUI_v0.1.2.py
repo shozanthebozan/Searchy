@@ -13,7 +13,7 @@ def bashcnct():
     search_data=query.get()
     bash=fr"""
     search_bash="{search_data}"
-    search_result=$(find / \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o -path "/run" \) -prune -o -iname "$search_bash" -print 2> /dev/null)
+    search_result=$(find / \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o \( -path "/run/*" -not -path "/run/media*" \) \) -prune -o -iname "$search_bash" -print 2> /dev/null)u
     if [ -z "$search_result" ]; then
         echo "File not found: 404"
     else
