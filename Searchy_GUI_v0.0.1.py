@@ -11,9 +11,9 @@ query.place(anchor="center", relx=0.5,rely=0.2)
 # Connecting python TK GUI to bash script with function
 def bashcnct():
     search_data=query.get()
-    bash=f"""
+    bash=fr"""
     search_bash="{search_data}"
-    search_result=$(find / -iname $search_bash 2> /dev/null)
+    search_result=$(find / \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o -path "/run" \) -prune -o -iname "$search_bash" -print 2> /dev/null)
     if [ -z "$search_result" ]; then
         echo "File not found: 404"
     else
@@ -25,9 +25,9 @@ def bashcnct():
     result_display.config(text=result.stdout)
 #search results tk gui
 result_frame=tk.Frame(root,borderwidth=4, relief="groove",height=250,width=400)
-result_frame.place(anchor="center",relx=0.5,rely=0.72)
+result_frame.place(anchor="center", relx=0.5, rely=0.68, relwidth=1.0, relheight=0.67)
 result_display=tk.Label(result_frame)
-result_display.place(anchor="center",relx=0.5,rely=0.2)
+result_display.place(anchor="center",relx=0.5,rely=0.5)
 #tk gui
 find=tk.Button(root,text="Search",fg="green",font=("Comic Sans MS",8,"italic"),command=bashcnct)
 find.place(anchor="center",relx=0.5,rely=0.3)
