@@ -9,6 +9,10 @@ Search_prompt=tk.Label(root,text="What would you like to search for?",fg="grey",
 Search_prompt.place(anchor="center", relx=0.5,rely=0.1)
 query=tk.Entry(root)
 query.place(anchor="center", relx=0.5,rely=0.2)
+search_dir_label=tk.Label(root,text="Directory to search \nEnter here:",font=("arial",8))
+search_dir_label.place(anchor='w', relx=0.01,rely=0.2)
+search_dir_entry=tk.Entry(root,width=5)
+search_dir_entry.place(anchor="center",relx=0.15,rely=0.3)
 
 # Connecting python TK GUI to bash script with function
 def bashcnct():
