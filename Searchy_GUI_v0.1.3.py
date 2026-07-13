@@ -1,6 +1,13 @@
 import subprocess
 import tkinter as tk
+# function to allow changing search directory
 search_dir="/"
+def change_dir():
+    global dirread
+    dirread=search_dir_entry.get()
+    search_dir=dirread
+    
+
 # tk gui
 root=tk.Tk()
 root.title("Searchy")
@@ -13,6 +20,9 @@ search_dir_label=tk.Label(root,text="Directory to search \nEnter here:",font=("a
 search_dir_label.place(anchor='w', relx=0.01,rely=0.2)
 search_dir_entry=tk.Entry(root,width=5)
 search_dir_entry.place(anchor="center",relx=0.15,rely=0.3)
+search_dir_entry.insert(0, f"{search_dir}")
+search_dir_submit=tk.Button(root, text="Ok",width=1,command=change_dir)
+search_dir_submit.place(anchor="center",relx=0.199999,rely=0.3)
 
 # Connecting python TK GUI to bash script with function
 def bashcnct():
