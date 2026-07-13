@@ -3,9 +3,9 @@ import tkinter as tk
 # function to allow changing search directory
 search_dir="/"
 def change_dir():
-    global dirread
-    dirread=search_dir_entry.get()
-    search_dir=dirread
+    global search_dir
+    search_dir=search_dir_entry.get()
+    
     
 
 # tk gui
@@ -29,7 +29,7 @@ def bashcnct():
     search_data=query.get()
     bash=fr"""
     search_bash="{search_data}"
-    search_result=$(find {dirread} \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o \( -path "/run/*" -not -path "/run/media*" \) \) -prune -o -iname "$search_bash" -print 2> /dev/null)u
+    search_result=$(find {search_dir} \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o \( -path "/run/*" -not -path "/run/media*" \) \) -prune -o -iname "$search_bash" -print 2> /dev/null)u
     if [ -z "$search_result" ]; then
         echo "File not found: 404"
     else
