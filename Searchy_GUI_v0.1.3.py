@@ -1,5 +1,6 @@
 import subprocess
 import tkinter as tk
+search_dir="/"
 # tk gui
 root=tk.Tk()
 root.title("Searchy")
@@ -8,6 +9,7 @@ Search_prompt=tk.Label(root,text="What would you like to search for?",fg="grey",
 Search_prompt.place(anchor="center", relx=0.5,rely=0.1)
 query=tk.Entry(root)
 query.place(anchor="center", relx=0.5,rely=0.2)
+
 # Connecting python TK GUI to bash script with function
 def bashcnct():
     search_data=query.get()
