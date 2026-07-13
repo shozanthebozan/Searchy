@@ -1,3 +1,5 @@
+# v0.1.3
+### Added feature that allows you to select a specific directory to search instead of being locked to /. Currently only on GUI version, tho.
 # v0.1.2
 ### Allowing both CLI and GUI versions to search /run/media
 # v0.1.1
