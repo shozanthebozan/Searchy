@@ -22,14 +22,14 @@ search_dir_entry=tk.Entry(root,width=5)
 search_dir_entry.place(anchor="center",relx=0.15,rely=0.3)
 search_dir_entry.insert(0, f"{search_dir}")
 search_dir_submit=tk.Button(root, text="Ok",width=1,command=change_dir)
-search_dir_submit.place(anchor="center",relx=0.199999,rely=0.3)
+search_dir_submit.place(anchor="center",relx=0.3,rely=0.3)
 
 # Connecting python TK GUI to bash script with function
 def bashcnct():
     search_data=query.get()
     bash=fr"""
     search_bash="{search_data}"
-    search_result=$(find / \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o \( -path "/run/*" -not -path "/run/media*" \) \) -prune -o -iname "$search_bash" -print 2> /dev/null)u
+    search_result=$(find {dirread} \( -path "/tmp" -o -path "/proc" -o -path "/sys" -o \( -path "/run/*" -not -path "/run/media*" \) \) -prune -o -iname "$search_bash" -print 2> /dev/null)u
     if [ -z "$search_result" ]; then
         echo "File not found: 404"
     else
