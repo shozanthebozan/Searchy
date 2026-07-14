@@ -1,5 +1,5 @@
 # v0.1.4
-### Fixed bug where you ahve to press ok on directory select to be able to search, when I wupdate the CLI version i will make it v0.1.4 for personal convinience instead of v0.1.3.
+### Fixed bug where you have to press ok on directory select to be able to search, when I wupdate the CLI version i will make it v0.1.4 for personal convinience instead of v0.1.3.
 # v0.1.3
 ### Added feature that allows you to select a specific directory to search instead of being locked to /. Currently only on GUI version, tho.
 # v0.1.2
