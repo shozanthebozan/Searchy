@@ -1,5 +1,9 @@
 import subprocess
 import tkinter as tk
+root=tk.Tk()
+__version__='v0.1.4'
+version_label=tk.Label(root,text=f"{__version__}")
+version_label.place(anchor="ne",rely=0.000001,relx=0.1)
 # function to allow changing search directory
 search_dir="/"
 def change_dir():
@@ -9,7 +13,6 @@ def change_dir():
     
 
 # tk gui
-root=tk.Tk()
 root.title("Searchy")
 root.geometry("400x350")
 Search_prompt=tk.Label(root,text="What would you like to search for?",fg="grey",font=("Helvetica",12,"bold"))
