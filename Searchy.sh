@@ -12,3 +12,4 @@ if [ -z "$results" ]; then
 else
  echo "$results"
 fi
+__version__=v0.1.4
